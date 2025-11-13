@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generative AI Vocabulary Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/vis-network.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/styles/vis-network.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 1rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+    #network {
+      width: 90%;
+      height: 600px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h2>Connections between vocabulary and report</h2>
+  <div id="network"></div>
+
+  <script>
+    const nodes = new vis.DataSet([
+      { id: 1, label: "Chatbots & Text Assistants", color: "#a5b4fc" },
+      { id: 2, label: "Image Generation", color: "#a5b4fc" },
+      { id: 3, label: "Code Generation", color: "#a5b4fc" },
+      { id: 4, label: "Education", color: "#a5b4fc" },
+
+      { id: 10, label: "Generative AI", color: "#86efac" },
+      { id: 11, label: "Prompt", color: "#86efac" },
+      { id: 12, label: "Prompt Engineering", color: "#86efac" },
+      { id: 13, label: "Fine-tuning", color: "#86efac" },
+      { id: 14, label: "LLM", color: "#86efac" },
+      { id: 15, label: "Transformer", color: "#86efac" },
+      { id: 16, label: "Hallucination", color: "#86efac" },
+      { id: 17, label: "Bias", color: "#86efac" },
+      { id: 18, label: "Copilot", color: "#86efac" },
+      { id: 19, label: "Ethical AI", color: "#86efac" },
+    ]);
+
+    const edges = new vis.DataSet([
+      { from: 1, to: 10 },
+      { from: 1, to: 11 },
+      { from: 1, to: 12 },
+      { from: 1, to: 16 },
+      { from: 1, to: 19 },
+
+      { from: 2, to: 10 },
+      { from: 2, to: 17 },
+      { from: 2, to: 13 },
+      { from: 2, to: 15 },
+
+      { from: 3, to: 10 },
+      { from: 3, to: 18 },
+      { from: 3, to: 14 }, 
+
+      { from: 4, to: 10 },
+      { from: 4, to: 19 },
+      { from: 4, to: 11 },
+    ]);
+
+    const container = document.getElementById("network");
+    const data = { nodes: nodes, edges: edges };
+    const options = {
+      physics: { stabilization: true },
+      edges: { color: { color: "#94a3b8" }, smooth: true },
+      nodes: {
+        shape: "dot",
+        size: 16,
+        font: { color: "#1e293b", size: 14 },
+        borderWidth: 1,
+      },
+    };
+    new vis.Network(container, data, options);
+  </script>
+</body>
+</html>
