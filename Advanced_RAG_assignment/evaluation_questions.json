@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "At what point does a contract become legally binding?",
+    "expected_keywords": ["agreement", "essential terms"]
+  },
+  {
+    "id": 2,
+    "question": "Is it mandatory to sign contracts on paper?",
+    "expected_keywords": ["orally", "writing"]
+  },
+  {
+    "id": 3,
+    "question": "What if a supplier delivers goods late?",
+    "expected_keywords": ["delay", "damages"]
+  },
+  {
+    "id": 4,
+    "question": "What information must be included when submitting a lawsuit?",
+    "expected_keywords": ["claim", "documents"]
+  },
+  {
+    "id": 5,
+    "question": "Do I have to pay a fee to go to civil court?",
+    "expected_keywords": ["state fee"]
+  },
+  {
+    "id": 6,
+    "question": "Why do contracts include force majeure clauses?",
+    "expected_keywords": ["force majeure", "liability"]
+  },
+  {
+    "id": 7,
+    "question": "Is mediation required before filing a lawsuit?",
+    "expected_keywords": ["mediation"]
+  },
+  {
+    "id": 8,
+    "question": "What proof is needed to sue a seller for defective goods?",
+    "expected_keywords": ["receipt", "evidence"]
+  }
+]
